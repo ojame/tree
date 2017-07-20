@@ -551,6 +551,7 @@ class Tree extends React.Component {
               key: keyOrPos,
               checked: false,
               halfChecked: false,
+              disableCheckbox: item.props.disableCheckbox,
               siblingPosition,
             };
             if (checkedKeys.indexOf(keyOrPos) !== -1) {

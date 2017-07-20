@@ -169,6 +169,9 @@ export function handleCheckState(obj, checkedPositionArr, checkIt) {
   let objKeys = Object.keys(obj);
   // let s = Date.now();
   objKeys.forEach((i, index) => {
+    if (obj[i].disableCheckbox) {
+      return;
+    }
     const iArr = splitPosition(i);
     let saved = false;
     checkedPositionArr.forEach((_pos) => {
